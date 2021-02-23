@@ -34,7 +34,7 @@ namespace AdventOfCode_2020
             int year = 2020,a=0,b=0;
             foreach (var t in list)
             {
-                int temp = year - t;
+                var temp = year - t;
                 if (hash.Contains(temp))
                 {
                     a = temp;
@@ -45,11 +45,13 @@ namespace AdventOfCode_2020
 
             return (a, b);
         }
+
+        public static Func<int, int, int> Multiply = (x, y) => x * y;
         static void Main(string[] args)
         {
             var lines = ReadFileInts(textfilename);
             (int FirstNumber, int SecondNumber) = FindingNumbersGivenSum(lines);
-            Console.WriteLine("FirstNumber:{0},SecondNumber:{1}",FirstNumber,SecondNumber);
+            Console.WriteLine("FirstNumber:{0},SecondNumber:{1},Multiplied:{2}",FirstNumber,SecondNumber, Multiply(FirstNumber,SecondNumber));
 
 
         }
