@@ -9,17 +9,11 @@ namespace AdventOfCode_2020
     class Program
     {
         static readonly string textfilename = @"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input1.txt";
-        /* public int find(int number)
-         {
-             string text=r
-             int n = number / 2;
-
-         }*/
         public static List<int> ReadFileInts(string text)
         {
             string[] lines = File.ReadAllLines(text);
             List<int> result = new List<int>();
-            foreach (string line in lines)
+            foreach (var line in lines)
             {
                 int Parsedline = int.Parse(line);
                 result.Add(Parsedline);
@@ -31,7 +25,8 @@ namespace AdventOfCode_2020
         public static (int FirstNumber,int SecondNumber) FindingNumbersGivenSum(List<int>list)
         {
             var hash = new HashSet<int>();
-            int year = 2020,a=0,b=0;
+            const int year = 2020;
+            int a=0,b=0;
             foreach (var t in list)
             {
                 var temp = year - t;
@@ -45,13 +40,13 @@ namespace AdventOfCode_2020
 
             return (a, b);
         }
-
+        
         public static Func<int, int, int> Multiply = (x, y) => x * y;
         static void Main(string[] args)
         {
             var lines = ReadFileInts(textfilename);
             (int FirstNumber, int SecondNumber) = FindingNumbersGivenSum(lines);
-            Console.WriteLine("FirstNumber:{0},SecondNumber:{1},Multiplied:{2}",FirstNumber,SecondNumber, Multiply(FirstNumber,SecondNumber));
+            Console.WriteLine("========Part One========== \nFirstNumber:{0},SecondNumber:{1},Multiplied:{2}",FirstNumber,SecondNumber, Multiply(FirstNumber,SecondNumber));
 
 
         }
