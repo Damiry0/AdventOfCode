@@ -30,8 +30,10 @@ namespace AdventOfCode_2020
             Console.WriteLine("Result:{0}",DumbWay(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input4.txt"));
             /*Day Five*/
             Console.WriteLine("###### DAY_5 ###############");
-            HighestSeatId(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt");
+ 
+            
             Console.WriteLine("Highest seat Id: {0}", HighestSeatId(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
+            Console.WriteLine("Own Seat Id: {0}", FindingOwnSeat(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
 
 
 
