@@ -21,7 +21,8 @@ namespace AdventOfCode_2020
             return result;
         }
         public static Func<int, int, int> Multiply = (x, y) => x * y;
-        public static (int FirstNumber, int SecondNumber) FindingNumbersGivenSum(List<int> list)
+        public static Func<int, int,int, int> Multiply_1 = (x, y, z) => x * y *z;
+        public static (int FirstNumber, int SecondNumber) FindingNumbersGivenSum(List<int> list) //ladnie
         {
             var hash = new HashSet<int>();
             const int year = 2020;
@@ -39,5 +40,28 @@ namespace AdventOfCode_2020
 
             return (a, b);
         }
+        public static (int FirstNumber, int SecondNumber, int ThirdNumber) FindingThreeNumbersGivenSum(List<int> list) //brute force
+        {
+            const int year = 2020;
+            int a = 0, b = 0,c=0;
+            for (int i = 0; i < list.Count-1; i++)
+            {
+                for (int j = i + 1; j < list.Count; j++)
+                {
+                    for (int k = j+1; k < list.Count; k++)
+                    {
+                        if (list[i] + list[j] + list[k] == year)
+                        {
+                            a = list[i];
+                            b = list[j];
+                            c = list[k];
+                        }
+                    }
+                }
+            }
+            return (a, b,c);
+        }
+
+
     }
 }
