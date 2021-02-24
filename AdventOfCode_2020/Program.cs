@@ -4,6 +4,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using static AdventOfCode_2020.Day1;
 using static AdventOfCode_2020.Day2;
+using static AdventOfCode_2020.Day4;
 
 
 namespace AdventOfCode_2020
@@ -23,7 +24,9 @@ namespace AdventOfCode_2020
             Console.WriteLine("###### DAY_2 ###############");
             var sPattern = @"^(?<min>\d{1,2})-(?<max>\d{1,2})\s(?<looked>\w):\s(?<sample>\w+)$"; // XD
             Console.WriteLine("Number of Valid Passowrds:{0}",NumberOfValidPassowords(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input2.txt",sPattern));
-
+            /*Day Four*/
+            Console.WriteLine("###### DAY_4 ###############");
+            Console.WriteLine("Result:{0}",DumbWay(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input4.txt"));
 
 
 
