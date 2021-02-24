@@ -16,13 +16,12 @@ namespace AdventOfCode_2020
             {
                 int Parsedline = int.Parse(line);
                 result.Add(Parsedline);
-                Console.WriteLine(line);
             }
             return result;
         }
         public static Func<int, int, int> Multiply = (x, y) => x * y;
-        public static Func<int, int,int, int> Multiply_1 = (x, y, z) => x * y *z;
-        public static (int FirstNumber, int SecondNumber) FindingNumbersGivenSum(List<int> list) //ladnie
+        public static Func<int, int,int, int> Multiply1 = (x, y, z) => x * y *z; //can't overload anonymous function :(
+        public static (int FirstNumber, int SecondNumber) FindingNumbersGivenSum(List<int> list) //O(n)
         {
             var hash = new HashSet<int>();
             const int year = 2020;
@@ -40,10 +39,10 @@ namespace AdventOfCode_2020
 
             return (a, b);
         }
-        public static (int FirstNumber, int SecondNumber, int ThirdNumber) FindingThreeNumbersGivenSum(List<int> list) //brute force
+        public static (int FirstNumber, int SecondNumber, int ThirdNumber) FindingThreeNumbersGivenSum(List<int> list) //O(n^2020) brute force
         {
             const int year = 2020;
-            int a = 0, b = 0,c=0;
+            int a = 0, b = 0,c = 0;
             for (int i = 0; i < list.Count-1; i++)
             {
                 for (int j = i + 1; j < list.Count; j++)
@@ -59,9 +58,7 @@ namespace AdventOfCode_2020
                     }
                 }
             }
-            return (a, b,c);
+            return (a,b,c);
         }
-
-
     }
 }
