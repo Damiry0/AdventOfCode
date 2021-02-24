@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using static AdventOfCode_2020.Day1;
 using static AdventOfCode_2020.Day2;
 using static AdventOfCode_2020.Day4;
+using static AdventOfCode_2020.Day5;
 
 
 namespace AdventOfCode_2020
@@ -27,8 +28,10 @@ namespace AdventOfCode_2020
             /*Day Four*/
             Console.WriteLine("###### DAY_4 ###############");
             Console.WriteLine("Result:{0}",DumbWay(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input4.txt"));
-
-
+            /*Day Five*/
+            Console.WriteLine("###### DAY_5 ###############");
+            HighestSeatId(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt");
+            Console.WriteLine("Highest seat Id: {0}", HighestSeatId(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
 
 
 
