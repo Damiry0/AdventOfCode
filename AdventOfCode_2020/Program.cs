@@ -34,7 +34,6 @@ namespace AdventOfCode_2020
             /*Day Three*/
             Console.WriteLine("###### DAY_3 ###############");
             Console.WriteLine("Number of three(Part one):{0}", SolvePartOne(3,1,input3));
-            Console.WriteLine("Number of three(Part one):{0}", SolvePartOne(3, 1, input3));
             Console.WriteLine("Number of three(Part two):{0}",
                 SolvePartOne(1, 1, input3) * SolvePartOne(3, 1, input3) * SolvePartOne(5, 1, input3) *
                 SolvePartOne(7, 1, input3) * SolvePartOne(1, 2, input3,2));
@@ -45,9 +44,8 @@ namespace AdventOfCode_2020
             Console.WriteLine("###### DAY_5 ###############");
             Console.WriteLine("Highest seat Id: {0}", HighestSeatId(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
             Console.WriteLine("Own Seat Id: {0}", FindingOwnSeat(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
-            Console.WriteLine("###### DAY_9 ###############");
-            Approval(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input9.txt");
-            Loop(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input8.txt");
+            Console.WriteLine("###### DAY_8 ###############");
+            Console.WriteLine("Cos: {0}", Loop(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input8.txt"));
 
 
         }
