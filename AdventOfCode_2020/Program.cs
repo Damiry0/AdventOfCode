@@ -4,6 +4,7 @@ using System.IO;
 using System.Text.RegularExpressions;
 using static AdventOfCode_2020.Day1;
 using static AdventOfCode_2020.Day2;
+using static AdventOfCode_2020.Day3;
 using static AdventOfCode_2020.Day4;
 using static AdventOfCode_2020.Day5;
 using static AdventOfCode_2020.Day9;
@@ -14,6 +15,8 @@ namespace AdventOfCode_2020
 {
     class Program
     {
+        private static readonly string input3 =
+            @"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input3.txt";
         static void Main(string[] args)
         {
             /*Day One */ /* Do przemyslenia budowa klas*/
@@ -28,7 +31,13 @@ namespace AdventOfCode_2020
             var sPattern = @"^(?<min>\d{1,2})-(?<max>\d{1,2})\s(?<looked>\w):\s(?<sample>\w+)$"; // XD
             Console.WriteLine("Number of Valid Passowrds Part One:{0}",NumberOfValidPassowords(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input2.txt",sPattern));
             Console.WriteLine("Number of Valid Passowrds Part Two:{0}", NumberOfValidPassowordsPartTwo(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input2.txt", sPattern));
-
+            /*Day Three*/
+            Console.WriteLine("###### DAY_3 ###############");
+            Console.WriteLine("Number of three(Part one):{0}", SolvePartOne(3,1,input3));
+            Console.WriteLine("Number of three(Part one):{0}", SolvePartOne(3, 1, input3));
+            Console.WriteLine("Number of three(Part two):{0}",
+                SolvePartOne(1, 1, input3) * SolvePartOne(3, 1, input3) * SolvePartOne(5, 1, input3) *
+                SolvePartOne(7, 1, input3) * SolvePartOne(1, 2, input3,2));
             /*Day Four*/
             Console.WriteLine("###### DAY_4 ###############");
             Console.WriteLine("Result:{0}",DumbWay(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input4.txt"));

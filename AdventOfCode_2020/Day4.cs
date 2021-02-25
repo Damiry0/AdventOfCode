@@ -28,7 +28,7 @@ namespace AdventOfCode_2020
                 }
                 if (line=="")
                 {
-                    if (temp == 8 || temp == 7 && dumb == true) result++;
+                    if (temp == 8 ||( temp == 7 && dumb == true)) result++;
                     temp = 0;
                 }
             }

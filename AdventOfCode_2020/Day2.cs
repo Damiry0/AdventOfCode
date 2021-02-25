@@ -82,7 +82,7 @@ namespace AdventOfCode_2020
             }
             return result;
         }
-        public static int NumberOfValidPassowordsPartTwo(string input, string sPattern)
+        public static int NumberOfValidPassowordsPartTwo(string input, string sPattern) //change to overload?
         {
             int result = 0; string line;
             StreamReader file = new System.IO.StreamReader(input);
