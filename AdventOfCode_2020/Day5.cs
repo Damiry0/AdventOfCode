@@ -14,9 +14,9 @@ namespace AdventOfCode_2020
             int max_row = 128;
             int min_seat = 0;
             int max_seat = 8;
-            for (int i = 0; i < line.Length; i++)
+            foreach (var t in line)
             {
-                switch (line[i])
+                switch (t)
                 {
                     case 'F':
                         max_row = max_row - ((max_row - min_row) / 2);
@@ -31,7 +31,6 @@ namespace AdventOfCode_2020
                         min_seat = min_seat + ((max_seat - min_seat) / 2);
                         break;
                 }
-
             }
 
             return min_row * 8 + min_seat;

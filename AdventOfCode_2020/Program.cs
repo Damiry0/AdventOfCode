@@ -7,6 +7,7 @@ using static AdventOfCode_2020.Day2;
 using static AdventOfCode_2020.Day4;
 using static AdventOfCode_2020.Day5;
 using static AdventOfCode_2020.Day9;
+using static AdventOfCode_2020.Day8;
 
 
 namespace AdventOfCode_2020
@@ -25,7 +26,9 @@ namespace AdventOfCode_2020
             /*Day Two */
             Console.WriteLine("###### DAY_2 ###############");
             var sPattern = @"^(?<min>\d{1,2})-(?<max>\d{1,2})\s(?<looked>\w):\s(?<sample>\w+)$"; // XD
-            Console.WriteLine("Number of Valid Passowrds:{0}",NumberOfValidPassowords(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input2.txt",sPattern));
+            Console.WriteLine("Number of Valid Passowrds Part One:{0}",NumberOfValidPassowords(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input2.txt",sPattern));
+            Console.WriteLine("Number of Valid Passowrds Part Two:{0}", NumberOfValidPassowordsPartTwo(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input2.txt", sPattern));
+
             /*Day Four*/
             Console.WriteLine("###### DAY_4 ###############");
             Console.WriteLine("Result:{0}",DumbWay(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input4.txt"));
@@ -35,6 +38,7 @@ namespace AdventOfCode_2020
             Console.WriteLine("Own Seat Id: {0}", FindingOwnSeat(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
             Console.WriteLine("###### DAY_9 ###############");
             Approval(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input9.txt");
+            Loop(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input8.txt");
 
 
         }
