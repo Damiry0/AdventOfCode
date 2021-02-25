@@ -64,7 +64,6 @@ namespace AdventOfCode_2020
             list.Sort();
             for (int i = 0; i < list.Count-2; i++)
             {
-                Console.WriteLine(list[i]);
                 if (list[i] != list[i + 2] - 2 ) result = list[i + 1]-1;
             }
             return result;

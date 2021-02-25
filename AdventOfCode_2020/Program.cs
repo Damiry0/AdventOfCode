@@ -6,6 +6,7 @@ using static AdventOfCode_2020.Day1;
 using static AdventOfCode_2020.Day2;
 using static AdventOfCode_2020.Day4;
 using static AdventOfCode_2020.Day5;
+using static AdventOfCode_2020.Day9;
 
 
 namespace AdventOfCode_2020
@@ -30,11 +31,10 @@ namespace AdventOfCode_2020
             Console.WriteLine("Result:{0}",DumbWay(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input4.txt"));
             /*Day Five*/
             Console.WriteLine("###### DAY_5 ###############");
- 
-            
             Console.WriteLine("Highest seat Id: {0}", HighestSeatId(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
             Console.WriteLine("Own Seat Id: {0}", FindingOwnSeat(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
-
+            Console.WriteLine("###### DAY_9 ###############");
+            Approval(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input9.txt");
 
 
         }
