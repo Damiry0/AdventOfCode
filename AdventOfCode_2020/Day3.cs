@@ -12,7 +12,7 @@ namespace AdventOfCode_2020
 
     class Day3
     {
-        const char tree = '#';
+  
         private static List<string> LoadList(string input)
         {
             List<string> result = new List<string>(); string line;
@@ -23,18 +23,7 @@ namespace AdventOfCode_2020
             }
             return result;
         }
-
-     /*   public static int load_map(string input)
-        {
-            var map = File.ReadLines(input).S
-                
-            int threeCount = 0;
-            Console.WriteLine(map[1].Length);
-
-            return threeCount;
-        }*/
-
-        public static int SolvePartOne(int a_X, int a_Y,string input, int step = 1)
+        public static long SolvePartOne(int a_X, int a_Y,string input, int step = 1)
         {
             var list = LoadList(input);
             
