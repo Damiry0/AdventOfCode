@@ -13,7 +13,7 @@ namespace AdventOfCode_2020
 {
     class Day8
     {
-        static List<(string Value, int)> input;
+        //static List<(string Value, int)> input;
 
        /* public enum OperationType
         {
@@ -24,17 +24,14 @@ namespace AdventOfCode_2020
         {
             int Accumulator=0;
             var regex = new Regex(@"^(\w+) ([+-]\d+)$", RegexOptions.Compiled);
-            input = File.ReadAllLines(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input8.txt")
+            List<(string Value, int)>  input = File.ReadAllLines(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input8.txt")
                 .Select(line => regex.Match(line).Groups)
                 .Select(groups => (groups[1].Value, int.Parse(groups[2].Value)))
                 .ToList();
-            int[] array = new int[input.Count];
-
-            int i=0;
-
-            while (true)//zastap
+            int[] array = new int[input.Count]; int i=0;
+            while (true)//zastap do 2 czesci
             {
-                if (array[i] == 1) break;
+                  if (array[i] == 1) break;
                 switch (input[i].Value)
                 {
                     case "nop":
@@ -58,11 +55,6 @@ namespace AdventOfCode_2020
                  i++;
             }
             return Accumulator;
-            /* for (int i = 0; i < input.Count; i++)
-             {
-                 Console.WriteLine(input[i]);
-             }*/
         }
-        //private static void 
     }
 }

@@ -9,14 +9,16 @@ using static AdventOfCode_2020.Day4;
 using static AdventOfCode_2020.Day5;
 using static AdventOfCode_2020.Day9;
 using static AdventOfCode_2020.Day8;
-
+using static AdventOfCode_2020.Day10;
 
 namespace AdventOfCode_2020
 {
     class Program
     {
-        private static readonly string input3 =
-            @"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input3.txt";
+        private const string input3 = @"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input3.txt";
+
+        private const string input10 =
+            @"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input10.txt";
         static void Main(string[] args)
         {
             /*Day One */ /* Do przemyslenia budowa klas*/
@@ -44,10 +46,12 @@ namespace AdventOfCode_2020
             Console.WriteLine("###### DAY_5 ###############");
             Console.WriteLine("Highest seat Id: {0}", HighestSeatId(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
             Console.WriteLine("Own Seat Id: {0}", FindingOwnSeat(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input5.txt"));
+            /*Day Eight*/
             Console.WriteLine("###### DAY_8 ###############");
-            Console.WriteLine("Cos: {0}", Loop(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input8.txt"));
-
-
+            Console.WriteLine("Cos: {0} ", Loop(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input8.txt"));
+            /*Day Ten*/
+            Console.WriteLine("###### DAY_10 ##############");
+            Console.WriteLine("Part one:{0}",PartOneDay10(input10));
         }
     }
 

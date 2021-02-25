@@ -7,7 +7,7 @@ namespace AdventOfCode_2020
 {
     class Day4
     {
-        public static int DumbWay(string input)
+        public static int DumbWay(string input) // nie dziala i dobrze
         {
             int result = 0;
             int temp = 0;
@@ -19,10 +19,13 @@ namespace AdventOfCode_2020
                 {
                     if (line[i] == ':')
                     {
-                        temp++;
-                        if (line[i - 3] == 'c')
+                        if (line[i - 3] != 'c')
                         {
-                            dumb = true; //XD
+                            temp++;
+                        }
+                        else
+                        {
+                            dumb = true;
                         }
                     }
                 }

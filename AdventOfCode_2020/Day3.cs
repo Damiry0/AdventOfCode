@@ -26,7 +26,6 @@ namespace AdventOfCode_2020
         public static long SolvePartOne(int a_X, int a_Y,string input, int step = 1)
         {
             var list = LoadList(input);
-            
             int treeCounter = 0;
             int x = 0;
             for (int i = step; i < list.Count; i=i+a_Y)
