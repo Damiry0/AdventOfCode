@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Xml.Schema;
 using System.Text.RegularExpressions;
+using static System.Int32;
 
 
 namespace AdventOfCode_2020
@@ -41,8 +42,8 @@ namespace AdventOfCode_2020
            foreach (Match match in matches)
            {
                _groups = match.Groups;
-               string minValue= match.Groups[1].Value;
-               string maxValue = match.Groups[2].Value;
+               var minValue= match.Groups[1].Value;
+               var maxValue = match.Groups[2].Value;
            }
            return _groups;
        }
@@ -50,12 +51,12 @@ namespace AdventOfCode_2020
         private static bool ValidPassword(string input, string sPattern)
         {
             var groups = ExtractingGroupCollection(input, sPattern);
-            var min = Int32.Parse(groups[1].ToString());
-            var max = Int32.Parse(groups[2].ToString());
-            char c = Convert.ToChar(groups[3].ToString());
+            var min = Parse(groups[1].ToString());
+            var max = Parse(groups[2].ToString());
+            var c = Convert.ToChar(groups[3].ToString());
             var code = groups[4].ToString();
             var temp = 0;
-            for (int i = 0; i < groups[4].Length; i++)
+            for (var i = 0; i < groups[4].Length; i++)
             {
                 if (c == code[i]) temp++;
             }
@@ -65,8 +66,8 @@ namespace AdventOfCode_2020
         private static bool ValidPasswordPartTwo(string input, string sPattern)
         {
             var groups = ExtractingGroupCollection(input, sPattern);
-            var min = Int32.Parse(groups[1].ToString());
-            var max = Int32.Parse(groups[2].ToString());
+            var min = Parse(groups[1].ToString());
+            var max = Parse(groups[2].ToString());
             char c = Convert.ToChar(groups[3].ToString());
             var code = groups[4].ToString();
             return (code[min-1] == c ^ code[max-1] == c) ? true : false;
@@ -74,8 +75,8 @@ namespace AdventOfCode_2020
 
         public static int NumberOfValidPassowords(string input, string sPattern)
         {
-            int result=0; string line;
-            StreamReader file = new System.IO.StreamReader(input);
+            var result=0; string line;
+            var file = new System.IO.StreamReader(input);
             while ((line = file.ReadLine()) != null)
             {
                 if (ValidPassword(line, sPattern) == true) result++;
@@ -84,8 +85,8 @@ namespace AdventOfCode_2020
         }
         public static int NumberOfValidPassowordsPartTwo(string input, string sPattern) //change to overload?
         {
-            int result = 0; string line;
-            StreamReader file = new System.IO.StreamReader(input);
+            var result = 0; string line;
+            var file = new System.IO.StreamReader(input);
             while ((line = file.ReadLine()) != null)
             {
                 if (ValidPasswordPartTwo(line, sPattern) == true) result++;

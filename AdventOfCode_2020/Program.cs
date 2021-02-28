@@ -49,6 +49,9 @@ namespace AdventOfCode_2020
             /*Day Eight*/
             Console.WriteLine("###### DAY_8 ###############");
             Console.WriteLine("Cos: {0} ", Loop(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input8.txt"));
+            /*Day Nine*/
+            Console.WriteLine("###### DAY_9 ###############");
+            Console.WriteLine("Cos: {0} ", PartOneXD(@"C:\Users\damir\Desktop\Visual\AdventOfCode_2020\AdventOfCode_2020\Input9.txt"));
             /*Day Ten*/
             Console.WriteLine("###### DAY_10 ##############");
             Console.WriteLine("Part one:{0}",PartOneDay10(input10));
