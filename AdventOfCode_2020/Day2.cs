@@ -11,7 +11,7 @@ namespace AdventOfCode_2020
 {
     class Day2
     {
-        private static GroupCollection groups;
+        private static GroupCollection _groups;
 
 
         /* public static List<int> ReadFile(string text)
@@ -40,11 +40,11 @@ namespace AdventOfCode_2020
         
            foreach (Match match in matches)
            {
-               groups = match.Groups;
+               _groups = match.Groups;
                string minValue= match.Groups[1].Value;
                string maxValue = match.Groups[2].Value;
            }
-           return groups;
+           return _groups;
        }
 
         private static bool ValidPassword(string input, string sPattern)

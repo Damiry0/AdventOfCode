@@ -38,13 +38,13 @@ namespace AdventOfCode_2020
 
         public static int HighestSeatId(string input)
         {
-            int Highestvalue = 0; string line; int beka;
-            StreamReader file = new System.IO.StreamReader(input);
+            int Highestvalue = 0; string line; int high;
+            using var file = new StreamReader(input);
             while ((line = file.ReadLine()) != null)
             {
 
-                beka = FiningPlace(line);
-                if (beka >= Highestvalue) Highestvalue = beka;
+                high = FiningPlace(line);
+                if (high >= Highestvalue) Highestvalue = high;
 
             }
             return Highestvalue;
@@ -54,8 +54,8 @@ namespace AdventOfCode_2020
         {
             string line;
             int result=0;
-            StreamReader file = new System.IO.StreamReader(input);
-            List<int> list = new List<int>();
+            var file = new StreamReader(input);
+            var list = new List<int>();
             while ((line = file.ReadLine()) != null)
             {
                 list.Add(FiningPlace(line));
