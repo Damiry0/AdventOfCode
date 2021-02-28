@@ -8,7 +8,6 @@ namespace AdventOfCode_2020
 {
     class Day9
     {
-        // zadanie z grafów, bruteforce
         private static List<long> ReadFileLine(string input)
         {
             var result = new List<long>(); string line;
@@ -38,18 +37,13 @@ namespace AdventOfCode_2020
         {
             var list = ReadFileLine(input);
             var result = 0;
-            for (var i = 25; i < input.Length; i++)
+            for (var i = 24; i < input.Length; i++)
             {
                 var list1= CalculatePossibleOutcomes(list.GetRange(i, 25));
                 var list2 = CalculatePossibleOutcomes(list.GetRange(i + 1, 25));
-                foreach (var t in list2)
+                if (list2.Any(t => !list1.Contains(t)))
                 {
-                    if (list1.Contains(t)) { }
-                    else
-                    {
-                        result = i;
-                        break;
-                    }
+                    result = i;
                 }
                 
             }
