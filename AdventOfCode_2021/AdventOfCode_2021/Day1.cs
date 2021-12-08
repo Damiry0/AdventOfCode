@@ -25,9 +25,27 @@ namespace AdventOfCode_2021
             return count;
         }
 
+        private static int LargerThreeMeasurment(List<int> input)
+        {
+            int count = 0,temp1,temp2;
+
+            for (var i = 0; i < input.Count - 3; i++)
+            {
+                temp1 = input[i] + input[i + 1] + input[i + 2];
+                temp2 = input[i+1] + input[i + 2] + input[i + 3];
+                if (temp2 > temp1) count++;
+            }
+            
+            return count;
+        }
+
         public static void Day1PartOne()
         {
-            Console.WriteLine("Output{0}",LargerMeasurment(ReadFileInts(filename)));
+            Console.WriteLine("DayOnePartOne: Output{0}",LargerMeasurment(ReadFileInts(filename)));
+        }
+        public static void Day1PartTwo()
+        {
+            Console.WriteLine("DayOnePartTwo: Output{0}",LargerThreeMeasurment(ReadFileInts(filename)));
         }
     }
 }
