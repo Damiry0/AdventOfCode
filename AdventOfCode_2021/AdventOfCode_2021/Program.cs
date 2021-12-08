@@ -12,6 +12,7 @@ namespace AdventOfCode_2021
             Day1PartOne();
             Day1PartTwo();
             Day2PartOne();
+            Day2PartTwo();
         }
     }
 }

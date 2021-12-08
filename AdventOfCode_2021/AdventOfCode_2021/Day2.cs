@@ -38,10 +38,39 @@ namespace AdventOfCode_2021
             }
             return horizontal*depth;
         }
+        
+        private static long FinalPositionWithManual(IEnumerable<Tuple<string, int>> input)
+        {
+            int horizontal=0,depth=0,aim=0;
+            foreach (var (item1, item2) in input)
+            {
+                switch (item1)
+                {
+                    case "forward":
+                    {
+                        horizontal+=item2;
+                        depth *= item2 * aim;
+                    } break;
+                    case "down":
+                    {
+                        aim+=item2;
+                    } break;
+                    case "up":
+                    {
+                        aim-=item2;
+                    } break;
+                }
+            }
+            return horizontal*depth;
+        }
 
         public static void Day2PartOne()
         {
             Console.WriteLine("DayTwoPartOne: Output{0}",FinalPosition(ReadFile(filename)));
+        }
+        public static void Day2PartTwo()
+        {
+            Console.WriteLine("DayTwoPartTwo: Output{0}",FinalPositionWithManual(ReadFile(filename)));
         }
     }
 }
